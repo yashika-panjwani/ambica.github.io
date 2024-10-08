@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corona Map</title>
+</head>
+<body>
+    
+</body>
+<script src="index.js"></script>
+</html> -->
+
+<html>
+<head>
+<meta charset="utf-8">
+<title>Store locator</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<link rel="stylesheet" href="style.css">
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css" rel="stylesheet">
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+
+<!-- index.html ka link  -->
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Smooch&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/2b996752fd.js" crossorigin="anonymous"></script>
+
+
+<!-- storelocator ka hi -->
+<!-- <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script> -->
+<style>
+    h1{
+        text-decoration: underline;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        position: relative;
+        top: -3px;
+        font-family: 'Koulen', cursive;
+    }
+    h3{
+        position: relative;
+        left: 50px;
+    }
+    .address{
+        /* line-height: 2px; */
+        font-family: 'Cabin', sans-serif;
+        /* background-color: bisque; */
+        /* border: 2px solid black; */
+        /* border-radius: 10px; */
+        position: relative;
+        top: 100px;
+        left: 40px;
+        width: 550px;
+        height: 400px;
+        font-size: 20px;
+        /* border-bottom: 2px solid gray; */
+    }
+    .storehours{
+        font-family: 'Cabin', sans-serif;
+        position: relative;
+        top: -150px;
+        left: 40px;
+        width: 550px;
+        /* height: 400px; */
+        font-size: 20px;
+    }
+    span{
+        font-weight: bold;
+    }
+    footer{
+        top: 130px;
+    }
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 30%; bottom: 0; width: 60%; left: 35%; height: 80%;}
+
+@media only screen and (max-width: 1726px){
+    .hour{
+        display: flex;
+        flex-direction: row;
+    }
+    #map{
+        /* position: absolute; top: 60%; */
+    }
+    .storehours{
+        position: absolute;
+        top: 410px;
+        left: 45px;
+    }
+}
+@media only screen and (max-width: 1180px){
+    .hour{
+        display: flex;
+        flex-direction: row;
+        /* padding: 45px; */
+    }
+    #map{
+        position: absolute; left: 45% ; top: 20%;
+        /* margin: 15px; */
+        width: 55%;
+    }
+    .storehours{
+        position: absolute;
+        top: 410px;
+        left: 45px;
+        
+    }
+
+}
+@media only screen and (max-width: 890px){
+    .hour{
+        display: flex;
+        flex-direction: row;
+        /* padding: 45px; */
+    }
+    #map{
+        position: absolute ;left:55%; top:30%;
+        /* margin: 15px; */
+        width: 40%;
+        height: 50%;
+    }
+    .storehours{
+        position: absolute;
+        top: 410px;
+        left: 45px;
+        
+    }
+}
+@media only screen and (max-width: 700px){
+    .hour{
+        display: flex;
+        flex-direction: column;
+        /* padding: 45px; */
+    }
+    #map{
+        position: absolute; top: 55%; left: 20%; 
+        /* margin: 15px; */
+        width: 60%;
+    }
+    .storehours{
+        position: absolute;
+        top: 410px;
+        left: 45px;
+        /* justify-content: center;
+        align-items: center; */
+        
+    }
+    /* h3{
+        justify-content: center;
+        align-items: center;
+    } */
+    /* .address{
+        justify-content: center;
+        align-items: center;
+    } */
+    footer{
+        position: absolute;
+        top: 110%;
+    }
+}
+@media only screen and (max-width: 400px){
+    .hour{
+        display: flex;
+        flex-direction: column;
+        /* padding: 45px; */
+        justify-content: center;
+        align-items: center;
+    }
+    #map{
+        position: absolute; top: 70%; left: 20%; 
+        /* margin: 15px; */
+        width: 60%;
+    }
+    .storehours{
+        position: absolute;
+        top: 410px;
+        left: 45px;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .address{
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 50px;
+        top: 250px;
+    }
+    footer{
+        position: absolute;
+        top: 110%;
+    }
+}
+
+/* #geocoder-container > div {
+min-width: 50%;
+margin-left: 25%;
+} */
+</style>
+</head>
+<body>
+    <nav class="navbar">
+        <img src="a5.png" alt="Ambica logo">
+        <li id="homeid"><a href="index.html">Home</a></li>
+        <li class="newli" target="_blank"><a href="shop.html">Shop by category</a></li>
+        <li><a href="locator.html">Store locator</a></li>
+        <li><a href="track.html">Track your order</a></li>
+        <li id="contactid"><a href="contact.html">Contact Us</a></li>
+        <button id="login">Login</button>
+        <button title="Wishlist" id="heart"><i class="fa fa-heart-o"></i></button>
+        <button title="Shopping bag" id="bagid"><i class="fa fa-shopping-bag"></i></button>
+    </nav>
+    <h1>Store Locator</h1>
+    <div class="hour">
+        <div class="address">
+        <h3> <i class="fa fa-map-marker"></i> Address:</h3>
+        <p>New Ambica Exclusive</p>
+        <p>bus stand, Main Rd, opposite police station,</p>
+        <p>Block A, Hemu Kalani, Bairagarh, Bhopal,</p>
+        <p>Madhya Pradesh 462030</p>
+        </div>
+        <div class="storehours">
+        <p><i class="fa fa-clock-o"></i> <span>Store Hours:</span> 11:00am - 9:00pm</p>
+        </div>
+        <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.2045887885242!2d77.33945721489542!3d23.272014684827354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c670155559701%3A0x6aaa06c9df56feb2!2sNew%20Ambica%20Exclusive!5e0!3m2!1sen!2sin!4v1675540595023!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <footer>Copyright&copynewambicaexclusive</footer>
+<div ></div>
+<script>
+	// mapboxgl.accessToken = 'pk.eyJ1IjoieWFzaGlrYXAiLCJhIjoiY2wya2Q5YWZnMDI4NjNqbXVwb2VmN2E2NiJ9.Im6fD62TnUlVHGRQ4oP0AQ';
+
+
+
+// const map = new mapboxgl.Map({
+// container: 'map', // container ID
+// style: 'mapbox://styles/mapbox/streets-v11', // style URL
+// style: 'mapbox://styles/mapbox/dark-v10', // style URL
+// center: [-74.5, 40], // starting position [lng, lat]
+// zoom: 9 // starting zoom
+// zoom: 1 // starting zoom
+// center: [0,40] 
+// });
+
+// Create a default Marker and add it to the map.
+// const marker1 = new mapboxgl.Marker({color:'black'})
+// // .setLngLat([77.3416677 , 23.2720909])
+// .setLngLat([77.34165 , 23.27202])
+// .addTo(map);
+
+// Create a default Marker, colored black, rotated 45 degrees.
+// const marker2 = new mapboxgl.Marker({ color: 'black', rotation: 45 })
+// .setLngLat([12.65147, 55.608166])
+// .addTo(map);
+
+
+
+
+
+// mapboxgl.accessToken = '<your access token here>';
+
+
+
+
+
+// const map = new mapboxgl.Map({
+//     container: 'map', // container ID
+//     style: 'mapbox://styles/mapbox/streets-v11', // style URL
+//     center: [-74.5, 40], // starting position [lng, lat]
+    // zoom: 9 // starting zoom
+//     zoom:1
+// });
+// map.on('load', () => {
+//     map.addLayer({
+//         id: 'terrain-data',
+//         type: 'line',
+//         source: {
+//             type: 'vector',
+//             url: 'mapbox://mapbox.mapbox-terrain-v2'
+//         },
+//         'source-layer': 'contour'
+//     });
+// });
+// map.on('load', () => {
+//     map.addLayer({
+//         id: 'rpd_parks',
+//         type: 'fill',
+//         source: {
+//             type: 'vector',
+//             url: 'mapbox://mapbox.3o7ubwm8'
+//         },
+//         'source-layer': 'RPD_Parks'
+//     });
+// });
+// map.on('load', () => {
+//     map.addLayer({
+//         id: 'rpd_parks',
+//         type: 'fill',
+//         source: {
+//             type: 'vector',
+//             url: 'mapbox://mapbox.3o7ubwm8'
+//         },
+//         'source-layer': 'RPD_Parks',
+//         layout: {
+//             visibility: 'visible'
+//         },
+//         paint: {
+//             'fill-color': 'rgba(61,153,80,0.55)'
+//         }
+//     });
+// });
+
+// Create a default Marker and add it to the map.
+
+
+
+
+// const marker1 = new mapboxgl.Marker({color:'black'})
+// // .setLngLat([77.3416677 , 23.2720909])
+// .setLngLat([77.34165 , 23.27202])
+// .addTo(map);
+
+
+
+
+// const map = new mapboxgl.Map({
+// container: 'map',
+// style: 'mapbox://styles/mapbox/streets-v11',
+// center: [-79.4512, 43.6568],
+// zoom: 13
+// });
+ 
+// const geocoder = new MapboxGeocoder({
+// accessToken: mapboxgl.accessToken,
+// marker: {
+// color: 'orange'
+// },
+// mapboxgl: mapboxgl
+// });
+ 
+// map.addControl(geocoder);
+</script>
+<!-- <script src="index.js"></script> -->
+ 
+</body>
+</html>

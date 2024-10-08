@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your order</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style2.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smooch&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2b996752fd.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            /* background-image: linear-gradient(45deg,beige, saddlebrown); */
+            /* background-image:-moz-linear-gradient() */
+            /* background-image: url(contact.jpg); */
+        }
+        /* .formclass::before {
+            /* background: url(contact.jpg) no-repeat center center/cover; 
+            background-image: linear-gradient(45deg, beige, saddlebrown);
+            content: "";
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+        } */
+
+        .formclass{
+            /* background-color: linear; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+        }
+        .formclass input{
+            margin: 4px;
+            padding: 6px;
+            
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <img src="a5.png" alt="Ambica logo">
+        <li id="homeid"><a href="index.html">Home</a></li>
+        <li class="newli" target="_blank"><a href="shop.html">Shop by category</a></li>
+        <li><a href="locator.html">Store locator</a></li>
+        <li><a href="track.html">Track your order</a></li>
+        <li id="contactid"><a href="contact.html">Contact Us</a></li>
+        <button id="login">Login</button>
+        <button title="Wishlist" id="heart"><i class="fa fa-heart-o"></i></button>
+        <button title="Shopping bag" id="bagid"><i class="fa fa-shopping-bag"></i></button>
+    </nav>
+    <br>
+    <form action="#" class="formclass">
+        Enter Your Name: <input type="text">
+        Enter Your Contact number: <input type="text">
+        Enter Your Order number: <input type="text" name="order" id="order" placeholder="SSD1260324">
+    </form>
+    <footer>Copyright&copynewambicaexclusive</footer>
+</body>
+
+</html>

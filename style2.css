@@ -1,0 +1,116 @@
+.img{
+    height: 133px;
+    width: 292px;
+    margin-left: 39%;
+    margin-top: 8px;
+}
+#image button{
+    /* height: 50px;
+    width: 50px; */
+    /* position: absolute;
+    right: 46px; */
+    background: none;
+    border: none;
+    height: 15px;
+}
+#image button:hover{
+    cursor: pointer;
+}
+#bagid{
+    position: absolute;
+    top:37px;
+    right: 15px;
+    /* height: fit-content;
+    width: fit-content; */
+}
+#heart{
+    position: absolute;
+    top:37px;
+    right: 40px;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 18px;
+    font-size: 50px;
+    font-family: 'Roboto Flex', sans-serif;
+
+}
+.collection{
+    /* width: 200px; */
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    position:relative;
+    top: 25px;
+    /* position: absolute;
+    bottom: 10px; */
+    /* height: 100%; */
+    background-color: antiquewhite;
+    /* grid-template-columns: 300fr 300fr 300fr; */
+}
+p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 9px;
+    font-weight: bold;
+}
+.collection img{
+    position: relative;
+    left: 50px;
+    top: 15px;
+    width: 300px;
+    height: 380px;
+    /* padding: 5px; */
+    margin: 13px;
+    border: 4px solid rgb(188, 138, 94);
+}
+.product{
+    position: relative;
+    top: 15px;
+    left: 150px;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+button a{
+    text-decoration: none;
+    color: black;
+}
+button a:hover{
+    background-color: black;
+    color: white;
+}
+.product:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+button i{
+    border: none;
+}
+.collection img:hover{
+    /* border: 3px solid black; */
+    /* height: 350px;
+    width: 280px; */
+    padding: 3px;
+    cursor: pointer;
+}
+.textclass text{
+    position: relative;
+    right: 1600px;
+    top: 150px;
+
+}
+/* @media only screen and (min-width: 601px) and(max-width:1262px ){
+    .mainclass{
+        display: grid;
+        grid-template-rows: auto;
+        background-color: red;
+    }
+
+} */

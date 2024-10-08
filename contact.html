@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Underbelly</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Smooch&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/2b996752fd.js" crossorigin="anonymous"></script>
+  <style>
+    footer{
+        position: relative;
+        top: 115px;
+    }
+    .fa{
+    font-size: 17px;
+}
+.south i:last-child:hover{
+    color: #717171;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.contact::before{
+    /* background-color: #656060; */
+    background: url(contact1.JPG) no-repeat center center/cover;
+    content: "";
+    position: absolute;
+    top:93px;
+    opacity: 0.5;
+    z-index: -1;
+    height: 100%;
+    height: 100%;
+    width: 100%;
+}
+.contact h1{
+    border-bottom: 2px solid gray;
+    position: relative;
+    top: 20px;
+    font-size: 46px;
+}
+.love{
+    font-size: 20px;
+    position: relative;
+    top: 35px;
+}
+.love p{
+    position: relative;
+    top: 10px;
+    font-size: 19px;
+}
+.love h3{
+    font-size: 24px;
+}
+.feedback form{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 100px;
+    left: -330px;
+}
+.feedback form input{
+    width: 413px;
+    height: 39px;
+    margin: 8px;
+    font-size: 15px;
+    /* border: none; */
+    border-radius: 6px;
+}
+.feedback form textarea{
+    height: 109px;
+    margin: 8px;
+    font-size: 15px;
+    border-radius: 6px;
+    padding: 3px;
+}
+#submitid{
+    background: none;
+    cursor: pointer;
+}
+#submitid:hover{
+    background-color: black;
+    color: white;
+}
+#insta{
+    position: relative;
+    top: -175px;
+    left: 205px;
+}
+#instagram a{
+    /* text-decoration: none; */
+    position: relative;
+    left: 25px;
+    top: -5px;
+    font-size: 25px;
+    color: black;
+}
+#call{
+    position: relative;
+    left: 8px;
+    top: 35px;
+    font-size: 25px;
+    text-decoration: underline;
+}
+#call a{
+    color: black;
+}
+#call .fa{
+    position: relative;
+    left: -35px;
+    top: 8px;
+}
+.feedback .fa{
+    font-size: 30px;
+    position: relative;
+    left:-5px ;
+    top: 2px;
+    color: black;
+}
+.formclass{
+    background: none;
+    /* position: relative;
+    top: 50px; */
+    outline: none;
+    border: none;
+}
+#first{
+    position: relative;
+    top: 2px;
+}
+#second{
+    position: relative;
+    top: 2px;
+}
+#third{
+    position: relative;
+    top: 3px;
+}
+#fourth{
+    position: relative;
+    top: 3px;
+}
+  </style>
+</head>
+
+<body>
+    <nav class="navbar" id="navid">
+        <img src="a5.png" alt="Ambica logo">
+        <li id="homeid"><a href="index.html">Home</a></li>
+        <li class="newli" target="_blank"><a href="shop.html">Shop by category</a></li>
+        <li><a href="locator.html">Store locator</a></li>
+        <li><a href="track.html">Track your order</a></li>
+        <li id="contactid"><a href="contact.html">Contact Us</a></li>
+        <button id="login">Login</button>
+        <button title="Wishlist" id="heart"><i class="fa fa-heart-o"></i></button>
+        <button title="Shopping bag" id="bagid"><i class="fa fa-shopping-bag"></i></button>
+    </nav>
+  <div class="contact">
+    <h1> &nbsp;CONTACT &nbsp;</h1>
+    <div class="love">
+        <h3>We'd <i class="fa fa-heart-o"></i> to help!</h3>
+        <p>We like to create things with fun, open minded people. Feel free to say hello!</p>
+    </div>
+    <div class="feedback">
+        <form action="noactionphp">
+            <input type="text" placeholder="Your Name">
+            <input type="number" placeholder="Contact no." >
+            <input type="email" placeholder="Email">
+            <textarea placeholder="Enter You Feedback"></textarea>
+            <input type="submit" id="submitid" value="Submit">
+        </form>
+        <div id="insta">
+            <p id="instagram"><i class="fa fa-instagram"></i> <a href="https://www.instagram.com/newambicaexclusive" target="_blank"> @newambicaexclusive</a></p> 
+            <!-- <p id="call"><i class="fa fa-phone"></i> <a href="https://wa.me/918969073110?text=" target="_blank">+91-8969073110</a></p> -->
+            <p id="call"><i class="fa fa-phone"></i> <a href="tel:8969073110p107" target="_blank">+91-9713211600</a></p>
+
+
+        </div>
+    </div>
+  </div>
+  <footer id="footstyle">Copyright&copynewambicaexclusive</footer>
+</body>
+</html>
